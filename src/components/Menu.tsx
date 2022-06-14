@@ -1,29 +1,25 @@
-import { RefObject } from "react"
+import { ReactNode } from "react"
 import tailt from "tailt"
-import { MenuLink } from "./Links"
 
-export function Menu({menuRef}: {menuRef: RefObject<HTMLDivElement>}) {
+export const Menu = ({children}: {children: ReactNode}) => {
     return (
-        <DivWrapper ref={menuRef}>
-            <Div >
-                <MenuLink href="">Road</MenuLink>
-                <MenuLink href="">Stake</MenuLink>
-                <MenuLink href="">FAQ</MenuLink>
-                <MenuLink href="https://twitter.com/flatlandelks/">Twitter</MenuLink>
-                <MenuLink href="">Discord</MenuLink>
+        <DivWrapper>
+            <Div>
+                {children}
             </Div>
         </DivWrapper>
     )
 }
+
 const DivWrapper = tailt.div`
-    hidden lg:hidden
+    lg:hidden
     absolute top-0 left-0 z-[19]
     px-3 py-3 sm:px-10 md:px-14
     w-full h-full
 `
 const Div = tailt.div`
     sticky top-24 px-8 py-6
-    flex flex-col
+    flex flex-col items-center
     w-full
     rounded-[2rem]
     bg-white bg-opacity-60 backdrop-blur-lg shadow-lg border border-[#666]
