@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         <NavBar>
           <NavLink>Stake</NavLink>
           <NavLink href='flatlanders'>Flatlanders</NavLink>
-          <NavLink>Future</NavLink>
+          <NavLink href='future'>Future</NavLink>
         </NavBar>
         <SocialButtons/>
         <MenuButton onClick={()=>setMenuOpen(!menuOpen)}/>
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           <NavMenu>
             <NavLink>Stake</NavLink>
             <NavLink href='flatlanders'>Flatlanders</NavLink>
-            <NavLink>Future</NavLink>
+            <NavLink href='future'>Future</NavLink>
           </NavMenu>
         </Menu>
       }

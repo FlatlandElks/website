@@ -15,13 +15,13 @@ import { SectionTeam } from '../components/Sections'
 import { SocialButtons } from '../components/SocialButtons'
 import { Brand, TopBar } from '../components/TopBar'
 import { TeamCard } from "../components/Card"
-import { Footer, FooterBox, FooterH, FooterLi, FooterList, FooterListBox, FooterMainTitle, FooterSubTitle, FooterTitleBox, FooterUl } from "../components/Footer"
+import { Footer, FooterBox, FooterMainTitle, FooterSubTitle, FooterTitleBox } from "../components/Footer"
 
 const DivFlatlanders = tailt.div`flex flex-col`
 const DivTeam = tailt.div`flex flex-col`
 const DivElk = tailt.div`grid pt-8 gap-x-4 gap-y-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6`
 
-const Flatlanders: NextPage = () => {
+const Future: NextPage = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
 
   return (
@@ -52,24 +52,7 @@ const Flatlanders: NextPage = () => {
             </Menu>
         }
         <Main>
-            <SectionTeam>
-                <DivFlatlanders>
-                    <H1>Flatlanders</H1>
-                    <P1>Some are born as Flatlanders. They have special skills.</P1>
-                </DivFlatlanders>
-                <DivTeam>
-                    <H2>Team</H2>
-                    <P2>They are chosen to unite lost Flatlanders</P2>
-                    <DivElk>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                    </DivElk>
-                </DivTeam>
-            </SectionTeam>
+            
         </Main>
         <Footer>
             <FooterBox>
@@ -77,40 +60,10 @@ const Flatlanders: NextPage = () => {
                     <FooterMainTitle>Flatland Elks</FooterMainTitle>
                     <FooterSubTitle>© Flatland Elks</FooterSubTitle>
                 </FooterTitleBox>
-                <FooterListBox>
-                    <FooterList>
-                        <FooterH>SocialMedia</FooterH>
-                        <FooterUl>
-                            <FooterLi>Twitter</FooterLi>
-                            <FooterLi>Discord</FooterLi>
-                            <FooterLi>Instagram</FooterLi>
-                            <FooterLi>Tiktok</FooterLi>
-                        </FooterUl>
-                    </FooterList>
-                    <FooterList>
-                        <FooterH>SocialMedia</FooterH>
-                        <FooterUl>
-                            <FooterLi>Twitter</FooterLi>
-                            <FooterLi>Discord</FooterLi>
-                            <FooterLi>Instagram</FooterLi>
-                            <FooterLi>Tiktok</FooterLi>
-                        </FooterUl>
-                    </FooterList>
-                    <FooterList>
-                        <FooterH>Projects</FooterH>
-                        <FooterUl>
-                            <FooterLi>Blabla</FooterLi>
-                            <FooterLi>Lorem</FooterLi>
-                            <FooterLi>Ipsum</FooterLi>
-                            <FooterLi>Dolor</FooterLi>
-                            <FooterLi>Ipsum</FooterLi>
-                        </FooterUl>
-                    </FooterList>
-                </FooterListBox>
             </FooterBox>
         </Footer>
     </Page>
   )
 }
 
-export default Flatlanders
+export default Future
