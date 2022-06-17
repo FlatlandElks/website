@@ -61,12 +61,13 @@ const Flatlanders: NextPage = () => {
                     <H2>Team</H2>
                     <P2>They are chosen to unite lost Flatlanders</P2>
                     <DivElk>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
-                        <TeamCard img={team}/>
+                        <TeamCard name="Ryomen" about="Young artist. Creates memes." img={team}/>
+                        <TeamCard name="Ekim" about="" img={team}/>
+                        <TeamCard name="Jordan" about="" img={team}/>
+                        <TeamCard name="Cryptorek" about="" img={team}/>
+                        <TeamCard name="Yadon" about="" img={team}/>
+                        <TeamCard name="Daisy" about="" img={team}/>
+                        <TeamCard name="Maxwell" about="" img={team}/>
                     </DivElk>
                 </DivTeam>
             </SectionTeam>
