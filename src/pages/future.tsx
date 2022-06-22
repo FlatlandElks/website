@@ -36,7 +36,7 @@ const Future: NextPage = () => {
             <Brand>Flatland Elks</Brand>
             <NavBar>
                 <NavLink>Stake</NavLink>
-                <NavLink href='flatlanders'>Flatlanders</NavLink>
+                <NavLink href='lodge'>Lodge</NavLink>
                 <NavLink href='future'>Future</NavLink>
             </NavBar>
             <SocialButtons/>
@@ -46,7 +46,7 @@ const Future: NextPage = () => {
             <Menu>
                 <NavMenu>
                     <NavLink>Stake</NavLink>
-                    <NavLink href='flatlanders'>Flatlanders</NavLink>
+                    <NavLink href='lodge'>Lodge</NavLink>
                     <NavLink href='future'>Future</NavLink>
                 </NavMenu>
             </Menu>

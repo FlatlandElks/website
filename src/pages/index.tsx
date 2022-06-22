@@ -5,6 +5,7 @@ import { useRef, useState } from 'react'
 import { NavLink } from '../components/Links'
 import { Menu } from '../components/Menu'
 import { MenuButton } from '../components/MenuButton'
+import { MusicPlayer } from '../components/MusicPlayer'
 import { NavBar, NavMenu } from '../components/NavBar'
 import { Page } from '../components/Page'
 import { SocialButtons } from '../components/SocialButtons'
@@ -25,12 +26,13 @@ const Home: NextPage = () => {
         <Brand>Flatland Elks</Brand>
         <NavBar>
           <NavLink>Stake</NavLink>
-          <NavLink href='flatlanders'>Flatlanders</NavLink>
+          <NavLink href='lodge'>Lodge</NavLink>
           <NavLink href='future'>Future</NavLink>
         </NavBar>
         <SocialButtons/>
         <MenuButton onClick={()=>setMenuOpen(!menuOpen)}/>
       </TopBar>
+      <MusicPlayer/>
       { menuOpen &&
         <Menu>
           <NavMenu>
