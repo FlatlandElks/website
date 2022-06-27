@@ -1,7 +1,6 @@
 import tailt from "tailt"
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import lodge from "../../public/lodge.png"
 import team from "../assets/team.png"
 import { useState } from 'react'
 import { H1, H2 } from '../components/Headings'
@@ -12,13 +11,14 @@ import { MenuButton } from '../components/MenuButton'
 import { NavBar, NavMenu } from '../components/NavBar'
 import { Page } from '../components/Page'
 import { P1, P2 } from '../components/Paragraphs'
-import { SectionTeam } from '../components/Sections'
+import { SectionFlatland, SectionTeam } from '../components/Sections'
 import { SocialButtons } from '../components/SocialButtons'
 import { Brand, TopBar } from '../components/TopBar'
-import { TeamCard } from "../components/Card"
-import { Footer, FooterBox, FooterH, FooterLi, FooterList, FooterListBox, FooterMainTitle, FooterSubTitle, FooterTitleBox, FooterUl } from "../components/Footer"
+import { TeamCard } from "../components/TeamCard"
 import Image from "next/image"
 import { MusicPlayer } from "../components/MusicPlayer"
+import { CardHor, CardsGrid, CardVer } from "../components/Cards"
+import Footer from "../components/Footer"
 
 const DivFlatlanders = tailt.div`flex flex-col`
 const DivTeam = tailt.div`flex flex-col`
@@ -57,11 +57,15 @@ const Flatlanders: NextPage = () => {
             </Menu>
         }
         <Main>
+            <SectionFlatland>
+                <CardsGrid>
+                    <CardHor>They are Elks</CardHor>
+                    <CardVer>Flatlanders</CardVer>
+                    <CardVer>They rule Solana</CardVer>
+                    <CardHor>Apes? Nah, elks are the best</CardHor>
+                </CardsGrid>
+            </SectionFlatland>
             <SectionTeam>
-
-            <ImgAntler>
-                <Image className="drop-shadow-lg rounded-[2rem]" src={lodge} alt="lodge"/>
-            </ImgAntler>
                 <DivTeam>
                     <H2>Team</H2>
                     <P2>They are chosen to unite lost Flatlanders</P2>
@@ -70,51 +74,13 @@ const Flatlanders: NextPage = () => {
                         <TeamCard name="Ekim" about="" img={team}/>
                         <TeamCard name="Jordan" about="" img={team}/>
                         <TeamCard name="Cryptorek" about="" img={team}/>
-                        <TeamCard name="Yadon" about="" img={team}/>
                         <TeamCard name="Daisy" about="" img={team}/>
                         <TeamCard name="Maxwell" about="" img={team}/>
                     </DivElk>
                 </DivTeam>
             </SectionTeam>
         </Main>
-        <Footer>
-            <FooterBox>
-                <FooterTitleBox>
-                    <FooterMainTitle>Flatland Elks</FooterMainTitle>
-                    <FooterSubTitle>© Flatland Elks</FooterSubTitle>
-                </FooterTitleBox>
-                <FooterListBox>
-                    <FooterList>
-                        <FooterH>SocialMedia</FooterH>
-                        <FooterUl>
-                            <FooterLi>Twitter</FooterLi>
-                            <FooterLi>Discord</FooterLi>
-                            <FooterLi>Instagram</FooterLi>
-                            <FooterLi>Tiktok</FooterLi>
-                        </FooterUl>
-                    </FooterList>
-                    <FooterList>
-                        <FooterH>SocialMedia</FooterH>
-                        <FooterUl>
-                            <FooterLi>Twitter</FooterLi>
-                            <FooterLi>Discord</FooterLi>
-                            <FooterLi>Instagram</FooterLi>
-                            <FooterLi>Tiktok</FooterLi>
-                        </FooterUl>
-                    </FooterList>
-                    <FooterList>
-                        <FooterH>Projects</FooterH>
-                        <FooterUl>
-                            <FooterLi>Blabla</FooterLi>
-                            <FooterLi>Lorem</FooterLi>
-                            <FooterLi>Ipsum</FooterLi>
-                            <FooterLi>Dolor</FooterLi>
-                            <FooterLi>Ipsum</FooterLi>
-                        </FooterUl>
-                    </FooterList>
-                </FooterListBox>
-            </FooterBox>
-        </Footer>
+        <Footer/>
     </Page>
   )
 }

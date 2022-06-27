@@ -14,8 +14,8 @@ import { P1, P2 } from '../components/Paragraphs'
 import { SectionTeam } from '../components/Sections'
 import { SocialButtons } from '../components/SocialButtons'
 import { Brand, TopBar } from '../components/TopBar'
-import { TeamCard } from "../components/Card"
-import { Footer, FooterBox, FooterMainTitle, FooterSubTitle, FooterTitleBox } from "../components/Footer"
+import { TeamCard } from "../components/TeamCard"
+import Footer, { FooterDiv, FooterBox, FooterMainTitle, FooterSubTitle, FooterTitleBox } from "../components/Footer"
 
 const DivFlatlanders = tailt.div`flex flex-col`
 const DivTeam = tailt.div`flex flex-col`
@@ -54,14 +54,7 @@ const Future: NextPage = () => {
         <Main>
             
         </Main>
-        <Footer>
-            <FooterBox>
-                <FooterTitleBox>
-                    <FooterMainTitle>Flatland Elks</FooterMainTitle>
-                    <FooterSubTitle>© Flatland Elks</FooterSubTitle>
-                </FooterTitleBox>
-            </FooterBox>
-        </Footer>
+        <Footer/>
     </Page>
   )
 }
