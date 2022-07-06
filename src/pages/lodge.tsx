@@ -14,7 +14,7 @@ import { P1, P2 } from '../components/Paragraphs'
 import { SectionFlatland, SectionTeam } from '../components/Sections'
 import { SocialButtons } from '../components/SocialButtons'
 import { Brand, TopBar } from '../components/TopBar'
-import { TeamCard } from "../components/TeamCard"
+import { TeamCard, TeamGrid } from "../components/TeamCard"
 import { MusicPlayer } from "../components/MusicPlayer"
 import { CardHor, CardsGrid, CardVer } from "../components/Cards"
 import Footer from "../components/Footer"
@@ -63,15 +63,14 @@ const Flatlanders: NextPage = () => {
                 
                     <H2>Team</H2>
                     <P2>They are chosen to unite lost Flatlanders</P2>
-                    
-                        <TeamCard name="Ryomen" about="" img={team}/>
+                    <TeamGrid>
+                        <TeamCard name="Ryomen" about="The youngest in the team but the oldest in the meme game" img={team}/>
                         <TeamCard name="Ekim" about="" img={team}/>
                         <TeamCard name="Jordan" about="" img={team}/>
                         <TeamCard name="Cryptorek" about="" img={team}/>
                         <TeamCard name="Daisy" about="" img={team}/>
                         <TeamCard name="Maxwell" about="" img={team}/>
-                    
-                
+                    </TeamGrid>
             </SectionTeam>
         </Main>
         <Footer/>

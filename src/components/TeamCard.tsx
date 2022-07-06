@@ -1,26 +1,37 @@
 import Image from "next/image"
+import { ReactNode } from "react"
 import tailt from "tailt"
 
 export const TeamCard = ({img, name, about}: {img: any, name: string, about: string}) => {
     return(
-        <CardWrapper>
+        <Card>
             <Image className="rounded-[2rem]" alt="member" src={img}/>
             <Name>{name}</Name>
             <About>{about}</About>
-        </CardWrapper>
+        </Card>
     )
 }
 
-const CardWrapper = tailt.div`
-    flex flex-col items-center    
+const Card = tailt.div`
+    flex flex-col
     rounded-[2rem]
 `
 const Name = tailt.h3`
-    font-bold
+    font-bold pl-2
     text-2xl
 `
 const About = tailt.p`
     font-medium
-    text-sm sm:text-base
-    opacity-70
+    text-sm lg:text-base
+    opacity-80 px-1
 `
+
+
+const Grid= tailt.div`
+    grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+    gap-x-5
+`
+
+export const TeamGrid = ({ children }: { children: ReactNode}) => (
+    <Grid>{children}</Grid>
+)
