@@ -1,0 +1,13 @@
+.menu-animation {
+    animation: menuFrame 200ms ease-in-out;
+    transform-origin: top center;
+}
+
+@keyframes menuFrame {
+    0% {
+        transform: scale(0)
+    }
+    100% {
+        transform: scale(1);
+    }
+}

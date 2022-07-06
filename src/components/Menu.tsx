@@ -12,7 +12,7 @@ export const Menu = ({children}: {children: ReactNode}) => {
 }
 
 const DivWrapper = tailt.div`
-    lg:hidden
+    lg:hidden menu-animation
     fixed top-24 left-0 z-[19]
     px-3 py-0 sm:px-10 md:px-14
     w-full h-full 
