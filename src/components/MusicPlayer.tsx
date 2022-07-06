@@ -19,7 +19,7 @@ export const MusicPlayer = () => {
 }
 
 const Player = tailt.button`
-    fixed bottom-4 right-4 z-30
+    fixed bottom-4 right-6 sm:bottom-6 sm:right-8 md:bottom-8 md:right-10 z-30
     flex justify-center items-center
     h-[4.5rem] w-[4.5rem] rounded-full
     bg-white bg-opacity-60 backdrop-blur-lg shadow-lg border border-[#999]
