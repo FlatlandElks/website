@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       <TopBar>
         <Brand>Flatland Elks</Brand>
         <NavBar>
-          <NavLink>Stake</NavLink>
+          <NavLink href='stake'>Stake</NavLink>
           <NavLink href='lodge'>Lodge</NavLink>
           <NavLink href='future'>Future</NavLink>
         </NavBar>

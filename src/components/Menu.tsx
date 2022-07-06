@@ -12,7 +12,7 @@ export const Menu = ({ isOpen, onClickOutside }: { isOpen: boolean, onClickOutsi
                 <PopUp>
                     <Item href='/'>Home</Item>
                     <Item href='/lodge'>Lodge</Item>
-                    <Item href='/'>Stake</Item>
+                    <Item href='/stake'>Stake</Item>
                 </PopUp>
             </Wrapper>}
         </>

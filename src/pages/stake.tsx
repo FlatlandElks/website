@@ -1,28 +1,28 @@
 import tailt from "tailt"
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import theLodge from '../../public/thelodge.png'
 import team from "../assets/team.png"
 import { useState } from 'react'
 import { H1, H2 } from '../components/Headings'
 import { NavLink } from '../components/Links'
 import { Main } from '../components/Main'
-import { Menu } from '../components/Menu'
-import { MenuButton } from '../components/MenuButton'
 import { NavBar, NavMenu } from '../components/NavBar'
 import { Page } from '../components/Page'
 import { P1, P2 } from '../components/Paragraphs'
-import { SectionTeam } from '../components/Sections'
+import { SectionFlatland, SectionTeam } from '../components/Sections'
 import { SocialButtons } from '../components/SocialButtons'
 import { Brand, TopBar } from '../components/TopBar'
-import { TeamCard } from "../components/TeamCard"
-import Footer, { FooterWrapper, Div, BrandTitle, BrandMark, BrandItemDiv } from "../components/Footer"
+import { TeamCard, TeamGrid } from "../components/TeamCard"
+import { MusicPlayer } from "../components/MusicPlayer"
+import { CardHor, CardsGrid, CardVer } from "../components/Cards"
+import Footer from "../components/Footer"
+import { Menu } from "../components/Menu"
+import { MenuButton } from "../components/MenuButton"
+import Image from "next/image"
 
-const DivFlatlanders = tailt.div`flex flex-col`
-const DivTeam = tailt.div`flex flex-col`
-const DivElk = tailt.div`grid pt-8 gap-x-4 gap-y-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6`
-
-const Future: NextPage = () => {
-  const [isOpen, setOpen] = useState(false)
+const Flatlanders: NextPage = () => {
+    const [isOpen, setOpen] = useState(false)
 
   return (
     <Page className='bg-amber-100'>
@@ -42,13 +42,14 @@ const Future: NextPage = () => {
             <SocialButtons/>
             <MenuButton onClick={() => setOpen(!isOpen)}/>
         </TopBar>
-        <Menu isOpen={isOpen} onClickOutside={() => setOpen(!isOpen)}/>
-        <Main>
-            
+        <Menu isOpen={isOpen}  onClickOutside={() => setOpen(!isOpen)}/>
+        <MusicPlayer/>
+        <Main className=" justify-center text-2xl font-medium text-amber-700">
+            It will worth to wait ;)
         </Main>
         <Footer/>
     </Page>
   )
 }
 
-export default Future
+export default Flatlanders
