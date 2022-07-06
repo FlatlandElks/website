@@ -23,7 +23,7 @@ const Name = tailt.h3`
 `
 const About = tailt.p`
     font-medium
-    text-sm lg:text-base
+    text-xs sm:text-sm lg:text-base
     opacity-80 px-1
 `
 
