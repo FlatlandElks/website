@@ -55,7 +55,7 @@ const BrandItem = () => (
 
 
 
-export const LiSelf = tailt.li`font-semibold text-base opacity-70 hover:opacity-100 hover:text-amber-600 cursor-pointer duration-200`
+export const LiSelf = tailt.li`font-semibold text-base opacity-70 hover:opacity-100 hover:text-amber-700 cursor-pointer duration-200`
 
 interface LiState { href?: string, children: string }
 const Li = ({ href = '/', children }: LiState) => <LiSelf><Link href={href}>{children}</Link></LiSelf>
