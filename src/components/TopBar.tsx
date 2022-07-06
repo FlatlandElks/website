@@ -7,7 +7,7 @@ import { SocialButtons } from "./SocialButtons"
 export const TopBar = ({onClickMenuButton}: {onClickMenuButton: MouseEventHandler}) => (
     <HeaderWrapper>
         <Header>
-            <Brand>Flatland Elks</Brand>
+            <Brand/>
                 <NavBar>
                     <Ul>
                         <Li href='stake'>Stake</Li>
@@ -34,7 +34,8 @@ const Header = tailt.header`
     rounded-full
     bg-white bg-opacity-60 backdrop-blur-lg shadow-lg border  border-[#666]
 `
-const Brand = tailt.h1`
+const Brand = () => <BrandH1><Link href='/'>Flatland Elks</Link></BrandH1>
+const BrandH1 = tailt.h1`
     font-bold text-2xl
     text-amber-600 hover:drop-shadow-[0_0_0.1rem_#FDE68A]
     cursor-pointer
