@@ -1,6 +1,7 @@
 import tailt from "tailt"
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import theLodge from '../../public/thelodge.png'
 import team from "../assets/team.png"
 import { useState } from 'react'
 import { H1, H2 } from '../components/Headings'
@@ -18,6 +19,7 @@ import { CardHor, CardsGrid, CardVer } from "../components/Cards"
 import Footer from "../components/Footer"
 import { Menu } from "../components/Menu"
 import { MenuButton } from "../components/MenuButton"
+import Image from "next/image"
 
 const Flatlanders: NextPage = () => {
     const [isOpen, setOpen] = useState(false)
@@ -44,6 +46,7 @@ const Flatlanders: NextPage = () => {
         <MusicPlayer/>
         <Main>
             <SectionFlatland>
+                <Image className="drop-shadow-[0_0_1rem_#000000bb]" alt="thelodge" src={theLodge}/>
                 <CardsGrid>
                     <CardHor>They are Elks</CardHor>
                     <CardVer>Flatlanders</CardVer>
@@ -56,7 +59,7 @@ const Flatlanders: NextPage = () => {
                     <H2>Team</H2>
                     <P2>They are chosen to unite lost Flatlanders</P2>
                     <TeamGrid>
-                        <TeamCard name="Ryomen" about="The youngest in the team but the oldest in the meme game" img={team}/>
+                        <TeamCard name="Ryomen" about="" img={team}/>
                         <TeamCard name="Ekim" about="" img={team}/>
                         <TeamCard name="Jordan" about="" img={team}/>
                         <TeamCard name="Cryptorek" about="" img={team}/>
