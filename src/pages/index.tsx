@@ -12,7 +12,7 @@ import { SocialButtons } from '../components/SocialButtons'
 import { Brand, TopBar } from '../components/TopBar'
 
 const Home: NextPage = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const [isOpen, setOpen] = useState(false)
 
   return (
     <Page className="bg-[url('/bg.png')] bg-cover bg-[85%_top]">
@@ -30,18 +30,10 @@ const Home: NextPage = () => {
           <NavLink href='future'>Future</NavLink>
         </NavBar>
         <SocialButtons/>
-        <MenuButton onClick={()=>setMenuOpen(!menuOpen)}/>
+        <MenuButton onClick={() => setOpen(!isOpen)}/>
       </TopBar>
       <MusicPlayer/>
-      { menuOpen &&
-        <Menu>
-          <NavMenu>
-            <NavLink>Stake</NavLink>
-            <NavLink href='flatlanders'>Flatlanders</NavLink>
-            <NavLink href='future'>Future</NavLink>
-          </NavMenu>
-        </Menu>
-      }
+      <Menu isOpen={isOpen} onClickOutside={() => setOpen(!isOpen)}/>
     </Page>
   )
 }

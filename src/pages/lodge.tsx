@@ -6,8 +6,6 @@ import { useState } from 'react'
 import { H1, H2 } from '../components/Headings'
 import { NavLink } from '../components/Links'
 import { Main } from '../components/Main'
-import { Menu } from '../components/Menu'
-import { MenuButton } from '../components/MenuButton'
 import { NavBar, NavMenu } from '../components/NavBar'
 import { Page } from '../components/Page'
 import { P1, P2 } from '../components/Paragraphs'
@@ -18,9 +16,11 @@ import { TeamCard, TeamGrid } from "../components/TeamCard"
 import { MusicPlayer } from "../components/MusicPlayer"
 import { CardHor, CardsGrid, CardVer } from "../components/Cards"
 import Footer from "../components/Footer"
+import { Menu } from "../components/Menu"
+import { MenuButton } from "../components/MenuButton"
 
 const Flatlanders: NextPage = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+    const [isOpen, setOpen] = useState(false)
 
   return (
     <Page className='bg-amber-100'>
@@ -38,18 +38,10 @@ const Flatlanders: NextPage = () => {
                 <NavLink href='future'>Future</NavLink>
             </NavBar>
             <SocialButtons/>
-            <MenuButton onClick={()=>setMenuOpen(!menuOpen)}/>
+            <MenuButton onClick={() => setOpen(!isOpen)}/>
         </TopBar>
+        <Menu isOpen={isOpen}  onClickOutside={() => setOpen(!isOpen)}/>
         <MusicPlayer/>
-        { menuOpen &&
-            <Menu>
-                <NavMenu>
-                    <NavLink>Stake</NavLink>
-                    <NavLink href='flatlanders'>Flatlanders</NavLink>
-                    <NavLink href='future'>Future</NavLink>
-                </NavMenu>
-            </Menu>
-        }
         <Main>
             <SectionFlatland>
                 <CardsGrid>

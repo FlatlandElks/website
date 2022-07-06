@@ -1,19 +1,15 @@
-import { MouseEventHandler, RefObject } from "react"
-import tailt from "tailt"
-import { IconMenu } from "./icons/IconMenu"
+import { MouseEventHandler } from 'react'
+import tailt from 'tailt'
+import { IconMenu } from './icons/IconMenu'
 
-export const MenuButton = ({onClick}: {onClick: MouseEventHandler<HTMLButtonElement>}) => {
-    return (
-            <Button onClick={onClick}>
-                <IconMenu/>
-            </Button>
-    )
-}
+export const MenuButton = ( { onClick }: { onClick: MouseEventHandler<HTMLButtonElement> }) => (
+    <Button onClick={onClick}>
+        <IconMenu/>
+    </Button>
+)
 
 const Button = tailt.button`
-    lg:hidden
-    h-9 w-9
-    fill-amber-600
-    hover:scale-[1.15] active:scale-95
+    w-9 h-9 lg:hidden
+    fill-neutral-500 hover:fill-amber-600 hover:scale-110 active:scale-100
     duration-200
 `

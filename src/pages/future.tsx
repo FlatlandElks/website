@@ -22,7 +22,7 @@ const DivTeam = tailt.div`flex flex-col`
 const DivElk = tailt.div`grid pt-8 gap-x-4 gap-y-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6`
 
 const Future: NextPage = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const [isOpen, setOpen] = useState(false)
 
   return (
     <Page className='bg-amber-100'>
@@ -40,17 +40,9 @@ const Future: NextPage = () => {
                 <NavLink href='future'>Future</NavLink>
             </NavBar>
             <SocialButtons/>
-            <MenuButton onClick={()=>setMenuOpen(!menuOpen)}/>
+            <MenuButton onClick={() => setOpen(!isOpen)}/>
         </TopBar>
-        { menuOpen &&
-            <Menu>
-                <NavMenu>
-                    <NavLink>Stake</NavLink>
-                    <NavLink href='lodge'>Lodge</NavLink>
-                    <NavLink href='future'>Future</NavLink>
-                </NavMenu>
-            </Menu>
-        }
+        <Menu isOpen={isOpen} onClickOutside={() => setOpen(!isOpen)}/>
         <Main>
             
         </Main>
