@@ -14,6 +14,7 @@ export const TeamCard = ({img, name, about}: {img: any, name: string, about: str
 
 const Card = tailt.div`
     flex flex-col
+    gap-y-1
     rounded-[2rem]
 `
 const Name = tailt.h3`
@@ -29,7 +30,7 @@ const About = tailt.p`
 
 const Grid= tailt.div`
     grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4
-    gap-x-5
+    gap-x-5 gap-y-6
 `
 
 export const TeamGrid = ({ children }: { children: ReactNode}) => (
