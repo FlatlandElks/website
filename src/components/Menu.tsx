@@ -42,6 +42,7 @@ const ItemSelf = tailt.li`
     font-medium text-2xl
     text-neutral-500
     hover:bg-amber-600 hover:bg-opacity-10 active:bg-opacity-40
+    active:scale-[0.85]
     duration-200 cursor-pointer
 `
 const Item = ({ children, href }: { children: ReactNode, href: string }) => (
