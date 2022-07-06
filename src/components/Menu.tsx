@@ -21,7 +21,7 @@ export const Menu = ({ isOpen, onClickOutside }: { isOpen: boolean, onClickOutsi
 
 const Wrapper = tailt.div`
     fixed top-24 left-0 lg:hidden z-30
-    w-full px-3 sm:px-10 md:px-14
+    w-full px-3 sm:px-10 md:px-14 select-none
 `
 const PopUp = tailt.ul`
     flex flex-col rounded-[2.25rem]
