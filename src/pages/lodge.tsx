@@ -5,20 +5,17 @@ import theLodge from '../../public/thelodge.png'
 import team from "../assets/team.png"
 import { useState } from 'react'
 import { H1, H2 } from '../components/Headings'
-import { NavLink } from '../components/Links'
 import { Main } from '../components/Main'
-import { NavBar, NavMenu } from '../components/NavBar'
 import { Page } from '../components/Page'
 import { P1, P2 } from '../components/Paragraphs'
 import { SectionFlatland, SectionTeam } from '../components/Sections'
 import { SocialButtons } from '../components/SocialButtons'
-import { Brand, TopBar } from '../components/TopBar'
+import { TopBar } from '../components/TopBar'
 import { TeamCard, TeamGrid } from "../components/TeamCard"
 import { MusicPlayer } from "../components/MusicPlayer"
 import { CardHor, CardsGrid, CardVer } from "../components/Cards"
 import Footer from "../components/Footer"
 import { Menu } from "../components/Menu"
-import { MenuButton } from "../components/MenuButton"
 import Image from "next/image"
 
 const Flatlanders: NextPage = () => {
@@ -32,16 +29,7 @@ const Flatlanders: NextPage = () => {
             <meta name="robots" content="index, follow" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <TopBar>
-            <Brand>Flatland Elks</Brand>
-            <NavBar>
-                <NavLink href='stake'>Stake</NavLink>
-                <NavLink href='lodge'>Lodge</NavLink>
-                <NavLink href='future'>Future</NavLink>
-            </NavBar>
-            <SocialButtons/>
-            <MenuButton onClick={() => setOpen(!isOpen)}/>
-        </TopBar>
+        <TopBar onClickMenuButton={() => setOpen(!isOpen)}/>
         <Menu isOpen={isOpen}  onClickOutside={() => setOpen(!isOpen)}/>
         <MusicPlayer/>
         <Main>

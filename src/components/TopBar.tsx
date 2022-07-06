@@ -1,13 +1,22 @@
-import { ReactNode, RefObject } from "react"
+import Link from "next/link"
+import { MouseEventHandler, ReactNode, RefObject } from "react"
 import tailt from "tailt"
 import { MenuButton } from "./MenuButton"
-import { NavBar } from "./NavBar"
 import { SocialButtons } from "./SocialButtons"
 
-export const TopBar = ({children}: {children: ReactNode}) => (
+export const TopBar = ({onClickMenuButton}: {onClickMenuButton: MouseEventHandler}) => (
     <HeaderWrapper>
         <Header>
-            {children}
+            <Brand>Flatland Elks</Brand>
+                <NavBar>
+                    <Ul>
+                        <Li href='stake'>Stake</Li>
+                        <Li href='lodge'>Lodge</Li>
+                        <Li href='future'>Future</Li>
+                    </Ul>
+                </NavBar>
+                <SocialButtons/>
+                <MenuButton onClick={onClickMenuButton}/>
         </Header>
     </HeaderWrapper>
 )
@@ -25,9 +34,30 @@ const Header = tailt.header`
     rounded-full
     bg-white bg-opacity-60 backdrop-blur-lg shadow-lg border  border-[#666]
 `
-export const Brand = tailt.h1`
+const Brand = tailt.h1`
     font-bold text-2xl
     text-amber-600 hover:drop-shadow-[0_0_0.1rem_#FDE68A]
     cursor-pointer
     duration-200
+`
+const NavBar = tailt.nav`
+    hidden lg:flex
+`
+const Ul = tailt.ul`
+    flex gap-x-16
+`
+
+const Li = ({children, href = ""}: {children:string, href?: string}) => {
+    return(
+        <Link href={href}>
+            <LiSelf>{children}</LiSelf>
+        </Link>
+    )
+}
+
+const LiSelf = tailt.li`
+    font-medium text-lg
+    text-neutral-500 hover:text-amber-600
+    hover:scale-110 active:scale-100
+    duration-200 cursor-pointer
 `

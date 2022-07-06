@@ -1,6 +1,5 @@
 import { ReactNode } from "react"
 import tailt from "tailt"
-import LLink from "next/link"
 import Link from "next/link"
 
 

@@ -4,16 +4,14 @@ import Head from 'next/head'
 import team from "../assets/team.png"
 import { useState } from 'react'
 import { H1, H2 } from '../components/Headings'
-import { NavLink } from '../components/Links'
 import { Main } from '../components/Main'
 import { Menu } from '../components/Menu'
 import { MenuButton } from '../components/MenuButton'
-import { NavBar, NavMenu } from '../components/NavBar'
 import { Page } from '../components/Page'
 import { P1, P2 } from '../components/Paragraphs'
 import { SectionTeam } from '../components/Sections'
 import { SocialButtons } from '../components/SocialButtons'
-import { Brand, TopBar } from '../components/TopBar'
+import { TopBar } from '../components/TopBar'
 import { TeamCard } from "../components/TeamCard"
 import Footer, { FooterWrapper, Div, BrandTitle, BrandMark, BrandItemDiv } from "../components/Footer"
 
@@ -32,16 +30,7 @@ const Future: NextPage = () => {
             <meta name="robots" content="index, follow" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <TopBar>
-            <Brand>Flatland Elks</Brand>
-            <NavBar>
-                <NavLink href='stake'>Stake</NavLink>
-                <NavLink href='lodge'>Lodge</NavLink>
-                <NavLink href='future'>Future</NavLink>
-            </NavBar>
-            <SocialButtons/>
-            <MenuButton onClick={() => setOpen(!isOpen)}/>
-        </TopBar>
+        <TopBar onClickMenuButton={() => setOpen(!isOpen)}/>
         <Menu isOpen={isOpen} onClickOutside={() => setOpen(!isOpen)}/>
         <Main>
             
