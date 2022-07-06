@@ -18,3 +18,8 @@ h2,
 li {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
+::selection {
+  background-color: #F97316;
+  color: white;
+}
