@@ -1,5 +1,7 @@
 import { ReactNode } from "react"
 import tailt from "tailt"
+import LLink from "next/link"
+import Link from "next/link"
 
 
 export const FooterWrapper = tailt.footer`flex flex-col items-center text-left px-8 py-16 bg-amber-200`
@@ -53,10 +55,16 @@ const BrandItem = () => (
 
 
 
+export const LiSelf = tailt.li`font-semibold text-base opacity-70 hover:opacity-100 hover:text-amber-600 cursor-pointer duration-200`
+
+interface LiState { href?: string, children: string }
+const Li = ({ href = '/', children }: LiState) => <LiSelf><Link href={href}>{children}</Link></LiSelf>
+
+
+
 export const ItemDiv = tailt.div`flex flex-col gap-y-3 w-1/2 md:w-auto`
 export const Title = tailt.h4`font-bold text-lg`
 export const Ul = tailt.ul`flex flex-col gap-y-2`
-export const Li = tailt.li`font-semibold text-base opacity-70 hover:opacity-100 hover:text-amber-600 cursor-pointer duration-200`
 
 interface ItemState { title: string, children: ReactNode }
 const Item = ({ title, children }: ItemState) => (

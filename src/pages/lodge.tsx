@@ -15,15 +15,9 @@ import { SectionFlatland, SectionTeam } from '../components/Sections'
 import { SocialButtons } from '../components/SocialButtons'
 import { Brand, TopBar } from '../components/TopBar'
 import { TeamCard } from "../components/TeamCard"
-import Image from "next/image"
 import { MusicPlayer } from "../components/MusicPlayer"
 import { CardHor, CardsGrid, CardVer } from "../components/Cards"
 import Footer from "../components/Footer"
-
-const DivFlatlanders = tailt.div`flex flex-col`
-const DivTeam = tailt.div`flex flex-col`
-const DivElk = tailt.div`grid pt-8 gap-x-4 gap-y-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6`
-const ImgAntler = tailt.div``
 
 const Flatlanders: NextPage = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
@@ -66,21 +60,22 @@ const Flatlanders: NextPage = () => {
                 </CardsGrid>
             </SectionFlatland>
             <SectionTeam>
-                <DivTeam>
+                
                     <H2>Team</H2>
                     <P2>They are chosen to unite lost Flatlanders</P2>
-                    <DivElk>
+                    
                         <TeamCard name="Ryomen" about="" img={team}/>
                         <TeamCard name="Ekim" about="" img={team}/>
                         <TeamCard name="Jordan" about="" img={team}/>
                         <TeamCard name="Cryptorek" about="" img={team}/>
                         <TeamCard name="Daisy" about="" img={team}/>
                         <TeamCard name="Maxwell" about="" img={team}/>
-                    </DivElk>
-                </DivTeam>
+                    
+                
             </SectionTeam>
         </Main>
         <Footer/>
+
     </Page>
   )
 }
